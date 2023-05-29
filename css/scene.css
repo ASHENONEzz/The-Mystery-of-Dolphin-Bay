@@ -1,0 +1,284 @@
+@font-face {
+    /*方正字迹-吕建德行楷简体*/
+    font-family: "FZZJ-LJDXKJT";
+    font-display: swap;
+    src: local("FZZJ-LJDXKJT"),
+         url("../fonts/FZZJ-LJDXKJW.TTF")format("truetype");
+}
+@font-face {
+    /*方正苏轼新诗柳楷简体*/
+    font-family: "FZSXSLKJW";
+    font-display: swap;
+    src: local("FZSXSLKJW"),
+         url("../fonts/FZSXSLKJW.TTF")format("truetype");
+}
+* {
+    user-select: none;
+}
+#flowBackButton {
+    font-weight: 800;
+    position: fixed;
+    left: 10vw;
+    top:5vh;
+    background-color: #4CAF50;
+    border-radius: 1vh;
+    border: none;
+    font-size: 30px;
+    color: #FFFFFF;
+    padding: 5px;
+    width: 5vw;
+    text-align: center;
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 1s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#flowBackButton:after {
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#flowBackButton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+#flowBackButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(134, 180, 244, 0.19);
+}
+body {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 0px;
+}
+.topBlock {
+    display: block;
+}
+.topButton {
+    display: inline;
+    size:10vh;
+}
+.basbt
+{
+    width: 50px;height: 50px;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+.hover
+{
+    background-color: gray;
+    transition: all 0.5s ease;
+}
+.basbt#ico-home {
+    margin-left: 2%;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50px;
+    background-image:url(../images/icon/totitle.png) ;
+    background-repeat:no-repeat;
+}
+#ico-home:hover{
+    margin-left: 2%;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50px;
+    background-image:url(../images/icon/totitle_hover.png) ;
+    background-repeat:no-repeat;
+}
+#ico-back {
+    margin-left: 1%;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50px;
+    background-image:url(../images/icon/back.png) ;
+    background-repeat: no-repeat;
+}
+#ico-back:hover{
+    margin-left: 1%;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50px;
+    background-image:url(../images/icon/back_hover.png) ;
+    background-repeat: no-repeat;
+}
+#ico-save {
+    margin-left: 1%;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-image:url(../images/icon/save.png) ;
+}
+#ico-save:hover{
+    margin-left: 1%;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-image:url(../images/icon/save_hover.png) ;
+}
+#flow-picture {
+    margin-left: 1%;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-image:url(../images/icon/flow.png) ;
+}
+#flow-picture:hover{
+    margin-left: 1%;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-image:url(../images/icon/flow_hover.png) ;
+}
+
+.below {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: minmax(5vh, auto);
+    grid-template-areas:
+      ". . . . . . . . . ."
+      "a n n n n n n n n n"
+      "a t t t t t t t t ."
+      ". t t t t t t t t p"
+      ". t t t t t t t t p";
+    background-image: url(../images/icon/ultimate.png);
+    width: 99vw;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 0%;
+    padding-left: 0%;padding-right: 0%;
+    margin-left: 0%;margin-right: 0%;
+    margin-bottom: 0ch;
+    position:absolute;
+    bottom: 0;
+    
+}
+.smallAvatar {
+    grid-area: a;
+}
+.below_name {
+    grid-area: n;
+    backdrop-filter: none;
+    width: 10%;
+    height: 80%;
+    background-color: #0000007f;
+    opacity: 1.0;
+    font-size: 30px;
+    font-family: "FZZJ-LJDXKJT";
+    text-shadow: 1px 1px 1px rgb(63, 62, 62);
+    background-origin: border=2px;
+    border-radius: 10px;
+    color: rgba(247, 248, 248);
+    text-align: center;
+}
+.below_skip {
+    grid-area: p;
+    font-size: 35px;
+    color:white;
+    text-shadow: 1px 1px 1px white;
+}
+.below_text {
+    font-size: large;
+    font-family: "FZSXSLKJW";
+    color: aliceblue;
+    line-height: 50px;
+    font-weight: 500;
+    font-size: 30px;
+    grid-area: t;
+    text-indent: 2em;
+}
+#smallAvatar {
+    width: 20vh;
+}
+.Character{
+    width: 100%;
+    height: 400px;
+    padding-bottom: 0%;
+    padding-left: 0%;padding-right: 0%;
+    margin-left: 0%;margin-right: 0%;
+    margin-bottom: 0ch;
+    position: relative;
+    bottom: 0vh;
+}
+.mCharacter {
+    position: fixed;
+    width: 33.3%;
+    height:400px;
+    left: 35%;
+}
+.lCharacter {
+    position: fixed;
+    width: 33.3%;
+    height:400px;
+    left: 0;
+}
+.rCharacter {
+    position: fixed;
+    width: 33.3%;
+    height:400px;
+    right: 5%;
+}
+.Choice {
+    position: fixed;
+    width:auto;
+    height:5%;
+    right: 1%;
+    margin-bottom: 20%;
+    bottom: 45%;
+}
+.choiceBox {
+    height: auto;
+    margin-top: 5%;
+    text-align: center;
+    width: 500px;
+    font-family: 楷体;
+    font-size: 32px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+    font-family: "FZSXSLKJW";
+    background-image: url(../images/icon/button.png);
+    background-repeat: no-repeat;
+    background-size: 200%;
+
+    border-radius: 85px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(13, 13, 14, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.choiceBox:hover{
+    transform: translateX(4px);
+    transform: translateY(-4px);
+    backdrop-filter: blur(20px);
+    box-shadow: rgba(0, 0, 0, 0.8) 2px 8px 8px;
+    color: rgb(252, 86, 86);
+    text-shadow: 1px 1px 2px rgb(7, 7, 7);
+    /*background-color: rgba(231, 157, 18, 0.459);*/
+}
+.choiceBox:active{
+    transform: translateY(4px);
+    box-shadow: rgba(0, 0, 0, 0.8) 2px 8px 8px;
+    color: rgb(67, 68, 68);
+    /*background-color: rgba(231, 157, 18, 0.459);*/
+}
