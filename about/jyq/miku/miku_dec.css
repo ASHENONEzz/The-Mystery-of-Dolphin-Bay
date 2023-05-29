@@ -1,0 +1,18 @@
+a {
+    text-decoration: underline #39cb55;
+    color: #39cb55;
+    /* background-color: #39cb55; */
+}
+
+li {
+    list-style-type: lower-greek;
+}
+.mask {
+    background-color: #39cb55;
+    color: #39cb55;
+    transition: color 0.5s;
+}
+
+.mask:hover {
+    color: #ffffff;
+}

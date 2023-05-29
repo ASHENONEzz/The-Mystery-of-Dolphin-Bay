@@ -1,0 +1,18 @@
+#return	{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	background-color:black;
+	height: 30px;
+	width: 60px;
+	text-align: center;
+	border-radius: 6px;
+}
+#top	{
+	text-decoration: none;
+	color: rgb(238, 197, 197);
+}
+body{
+	background-image: url(bj.png) ;
+	background-size: 100%;
+}

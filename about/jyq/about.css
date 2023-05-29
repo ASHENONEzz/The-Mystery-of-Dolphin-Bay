@@ -1,0 +1,98 @@
+* {
+    background-color: #e3f0f6;
+    user-select:none;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color:#39c5bb;
+}
+a:hover {
+    color:#66ccff
+}
+.topPicture {
+    margin-bottom: 100px;
+}
+.topPicture img{
+    width: 100%;
+    height: auto;
+    background-attachment:fixed;
+}
+.main {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "na ct ct ct ct ct ";
+}
+.content{
+    grid-area: ct;
+    margin: 0;
+    padding: 0;
+}
+#me {
+    float: right;
+    height: 30%;
+}
+.nav{
+    grid-area: na;
+    background-color:#e3f0f6;
+    height: 100%;
+    padding: 0;
+    left: 10px;
+}
+.nav ul{
+    padding: 0;
+    line-height: 50px;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    height: 100%;
+}
+.nav li{
+    text-align: center;
+    list-style: none;
+    width: 75%;
+}
+.nav li a{
+    color:#66ccff;
+    font-family: "STXinwei";
+    font-size: 20px;
+    transition: width 2s, background-color 2s, transform 2s;
+    text-decoration:none;
+}
+.nav li img {
+    width: 70%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+    animation: TuBiao 10s linear infinite;
+}
+@keyframes TuBiao{
+	0%{transform: rotate(0deg);}
+	50%{transform: rotate(180deg);}
+	100%{transform: rotate(360deg);}
+}
+.nav li a:hover{
+    font-weight: bolder;
+    color:#66ccff;
+    font-family: "STXinwei";
+    font-size: 25px;
+}
+footer {
+    text-align:center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+    font-family: "STLiti";
+    font-size: 40px;
+}
+h2 {
+    font-family: "STLiti";
+}
+p {
+    text-indent:2em;
+    font-family: "STKaiti";
+    font-weight: 800;
+}
