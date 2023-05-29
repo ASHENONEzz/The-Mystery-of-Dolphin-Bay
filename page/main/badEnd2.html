@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>badEnd3</title>
+        <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+        <script src="../js/Achievement.js"> </script>
+        <style>
+            * {
+                user-select: none;
+            }
+            body {
+                background-color: black;
+                background-size: cover;
+            }
+            h1 {
+                color:red;
+                font-size: 150px;
+                text-align: center;
+                line-height: 300%;
+                word-spacing: 50px;
+            }
+            h2 {
+                color: aliceblue;
+                font-size: 50px;
+                text-align: center;
+                line-height: 80%;
+                word-spacing: 25px;
+            }
+            h3 {
+                color: aliceblue;
+                font-size: 20px;
+                text-align: center;
+                line-height: 80%;
+                word-spacing: 25px;
+            }
+            #start {
+                text-align: center;
+                opacity: 0;
+            }
+            .firstBt
+            {   
+                backdrop-filter: blur(10px);
+                height: 3%;
+                margin-top: 5%;background-color: rgba(223, 199, 199, 0);
+                opacity: 1.0;font: 16px 黑体;
+                text-shadow: 1px 1px 1px rgb(63, 62, 62);
+                border-radius: 20px;
+                color: rgba(247, 248, 248);
+            }
+            #title{
+                opacity: 0;
+            }
+            #setitle{
+                margin-top: 0;
+                opacity: 0;
+            }
+            #subtitle{
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="title">
+            <h1>失败结局三</h1>
+        </div>
+        <div id="setitle">
+            <h2>壮烈成仁</h2>
+        </div>
+        <div id="subtitle">
+            <h3>你为了阻止高桥的暴行，牺牲了自己的性命......</h3>
+        </div>
+        <div id="start">
+            <p>
+                <button class="firstBt" type="button" onclick="goForward()">
+                    点击回到首页
+                </button>
+            </p>
+        </div> 
+        <script>
+            $(document).ready(function () {
+                $(window).load(function () {
+                    $("#title").animate({ opacity: "1.0" }, 4000);
+                    setTimeout(function() { 
+                                    $("#setitle").animate({ opacity: "1.0" }, 1000); 
+                                }, 2000);
+                    setTimeout(function() { 
+                                    $("#subtitle").animate({ opacity: "1.0" }, 1000); 
+                                }, 4000);
+                    setTimeout(function() { 
+                                    $("#start").animate({ opacity: "1.0" }, 500); 
+                                }, 8000);
+                })
+            })
+            function goForward() {
+                 window.location.assign("../mainpage.html");
+            }
+            window.onload = function save() {
+                var Player = JSON.parse(localStorage.getItem("temp"));
+                AddNewAchieve(4);
+                Player.badEnd[0] = 1;
+                localStorage.setItem("temp", JSON.stringify(Player));
+                localStorage.setItem(Player.name, JSON.stringify(Player));
+            }
+            setTimeout(function() {
+                location.assign("../mainpage.html"); 
+                }, 16000);  //16秒后将会调用执行remind()函数
+        </script>
+    </body>
+</html>

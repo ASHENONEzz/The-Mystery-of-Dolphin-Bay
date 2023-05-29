@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>启动页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/avatar/女主h.png" />
+    <link rel="stylesheet" href="../css/Achievement.css">
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <audio id="music0" autoplay="autoplay" loop="loop" preload="preload" src="./music/bg/mute.ogg" volume="1.0"></audio>
+    <audio id="music1" autoplay="autoplay" loop="loop" preload="preload" src="./music/bg/mute.ogg" volume="1.0"></audio>
+    <style>
+        @font-face {
+            /*方正字迹-吕建德行楷简体*/
+            font-family: "FZZJ-LJDXKJT";
+            font-display: swap;
+            src: local("FZZJ-LJDXKJT"),
+                url("./fonts/FZZJ-LJDXKJW.TTF")format("truetype");
+        }
+
+        @font-face {
+            /*方正苏轼新诗柳楷简体*/
+            font-family: "FZSXSLKJW";
+            font-display: swap;
+            src: local("FZSXSLKJW"),
+                url("./fonts/FZSXSLKJW.TTF")format("truetype");
+        }
+
+        * {
+            user-select: none;
+        }
+
+        body {
+            background: url(./images/bg/index_background.png) no-repeat;
+            background-size: cover;
+        }
+
+        #title {
+            display: block;
+            margin-top: 5%;
+            left: 25%;
+            text-align: center;
+        }
+
+        img {
+            text-align: center;
+        }
+
+        #start {
+            text-align: center;
+            font-family: "FZZJ-LJDXKJT";
+            size: 200px;
+            opacity: 0;
+        }
+
+        .firstBt {
+            backdrop-filter: blur(10px);
+            width: 25%;
+            height: 10%;
+            margin-top: 5%;
+            background-color: rgba(255, 0, 0, 0.0);
+            opacity: 1.0;
+            font: 25px 黑体;
+            text-shadow: 1px 1px 1px rgb(63, 62, 62);
+            background-origin: border=0;
+            border-radius: 10px;
+            color: rgba(247, 248, 248);
+            font-family: "FZZJ-LJDXKJT";
+            font-size: 40px;
+        }
+
+        p {
+            font-size: large;
+            Letter-spacing: large;
+        }
+
+        #title {
+            opacity: 0;
+        }
+    </style>
+    <script>
+        var nowPlay, num = 0, nowVolume = 1;
+        window.localStorage.nowVolume = 1;
+        function musicPlay() {
+            setInterval(function () {
+                if (nowPlay != window.localStorage.nowBgm) {
+                    nowPlay = window.localStorage.nowBgm;
+                    $("#music" + num).animate({ volume: "0.0" }, 2000);
+                    num = (num + 1) % 2; //取模，实现交叉渐变
+                    document.getElementById("music" + num).src = "./music/bg/" + window.localStorage.nowBgm + ".ogg";
+                    $("#music" + num).animate({ volume: nowVolume }, 2000);
+                }
+                if (nowVolume != window.localStorage.nowVolume) {
+                    nowVolume = window.localStorage.nowVolume;
+                    $("#music" + num).animate({ volume: nowVolume }, 200);
+                } // 音量调节
+            }, 1000);
+        }
+        $(document).ready(function () {
+            $(window).load(function () {
+                $("#title").animate({ opacity: "1.0" }, 2000);
+                setTimeout(function () {
+                    $("#start").animate({ opacity: "1.0" }, 1000);
+                }, 2000);
+            })
+        })
+        function startFunc() {
+            document.getElementById("index").style.display = "none";
+            window.document.getElementById("MAIN").style.width = "100%";
+            window.document.getElementById("MAIN").style.height = "100%";
+        }
+        function start() {
+            musicPlay();
+            window.localStorage.nowBgm = "首页印象曲";
+
+            setTimeout("startFunc()", 6000);
+            $("#start").animate({ opacity: "0.0" }, 2000);
+
+            setTimeout(function () {
+                $("#title").animate({ opacity: "0.0" }, 5000);
+            }, 1000);
+
+        }
+    </script>
+</head>
+
+<body style="margin: 0;">
+    <iframe src="./page/login.html" width="0%" height="0%" frameborder="0" style="margin: 0;" allow="autoplay"
+        id="MAIN">
+    </iframe>
+    <div id="index">
+        <div id="title">
+            <img src="./images/icon/title.png" id="titleImg">
+        </div>
+        <div id="start">
+            <p>
+                <button class="firstBt" type="button" onclick="start()">
+                    点 击 开 始
+                </button>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

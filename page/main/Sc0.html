@@ -1,0 +1,73 @@
+<html lang="zh-cmn-Hans"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Sc0</title>
+        <link href="../../css/scene.css" rel="stylesheet" type="text/css"/>
+        <script src="../../js/story.js"></script>
+    </head>
+    <body>
+        <div id="flowBackButton" style="display: none;"onclick="flowBack();">
+            <div>&#10554;</div>
+        </div>
+        <iframe src="../flow/flow.html" 
+                width="0%" 
+                height="0%" 
+                frameborder="0"
+                position="absolute"
+                style="margin: 0" 
+                allow="autoplay"
+                id="flow">
+        </iframe>
+        <div id="content">
+            <div class="topBlock">
+                <div class="topButton">
+                    <button class="basbt" id="ico-home" onclick="toHome()"></button>
+                </div>
+                <div class="topButton">
+                    <button class="basbt" id="ico-back" onclick="Back()"></button>
+                </div>
+                <div class="topButton">
+                    <button class="basbt" id="ico-save" onclick="saveGame('Sc0')"></button>
+                </div>
+                <div class="topButton">
+                    <button class="basbt" id="flow-picture" onclick="flowPicture()"></button>
+                </div>
+            </div>
+            <div class="Character">
+                <div class="lCharacter">
+                    <img id="lc" alt="左边的人">
+                </div>
+                <div class="mCharacter">
+                    <img id="mc" alt="中间的人">
+                </div>
+                <div class="rCharacter">
+                    <img id="rc" alt="右边的人">
+                </div>
+            </div>
+            <div class="Choice">
+                <div class="choiceBox" style="display: none;" id="Choice1" onclick="story.choiceClick1()"></div>
+                <div class="choiceBox" style="display: none;" id="Choice2" onclick="story.choiceClick2()"></div>
+                <div class="choiceBox" style="display: none;" id="Choice3" onclick="story.choiceClick3()"></div>
+                <div class="choiceBox" style="display: none;" id="Choice4" onclick="story.choiceClick4()"></div>
+                <div class="choiceBox" style="display: none;" id="Choice5" onclick="story.choiceClick5()"></div>
+            </div>
+        
+            <div class="below">
+                <div class="smallAvatar">
+                    <img id="smallAvatar" alt="头像">
+                </div>
+                <div class="below_name">
+                    <div id="speaker" class="below_right_name"></div>
+                </div>
+                <div class="below_text" >
+                    <div id="idText" class="text"></div>
+                </div>
+                <div class="below_skip" onclick="story.next()">>>></div>
+            </div>
+        </div>
+        <audio id="sound" autoplay></audio> 
+        <audio id="bgm" autoplay loop></audio>     
+        <script src="../../js/story/scene0.js"> </script>
+        <script src="../../js/Achievement.js"> </script>
+    </body>
+</html>

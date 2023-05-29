@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>成就界面</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/avatar/女主h.png" />
+    <link rel="stylesheet" href="../css/Achievement.css">
+    <title>Achievement</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="htmleaf-header">
+            <h1 style="color: white;">Achievement</h1>
+            <div class="htmleaf-links">
+                <a class="htmleaf-icon icon-htmleaf-home-outline" onclick="window.location.assign('./mainpage.html')"
+                    title="返回首页" target="_blank"><span>
+                        返回主页</span></a>
+                <a class="htmleaf-icon icon-htmleaf-arrow-forward-outline"
+                    onclick="window.window.location.assign('./mainpage.html')" title="返回上一页" target="_blank"><span>
+                        返回上一页</span></a>
+            </div>
+        </header>
+        <script>
+            window.onload = function () {
+                /* 无定制类需求使用 */
+                // var achieveNameP1 = ["","","","","","","",""];
+                // var achieveNameP2 = ["","","","","","","",""];
+                // var array = JSON.parse(localStorage.getItem("temp"));
+                // var i = array.Achievement[0];
+                // for (i = 0; i < 8; i ++) {
+                //     if (array.Achievement[i] == 1){
+                //         var tmp = document.getElementById((i+1));
+                //         tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                //         document.getElementById('p' + (i+1) + '1').innerHTML = achieveNameP1[i];
+                //         document.getElementById('p' + (i+1) + '2').innerHTML = achieveNameP2[i];
+                //     }
+                // }
+                /* 定制类需求使用 */
+                var array = JSON.parse(localStorage.getItem("temp"));
+                var i = array.Achievement[0];
+                if (i == 1) {
+                    var tmp = document.getElementById('1');
+                    tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                    document.getElementById('p11').innerHTML = "雷区蹦迪";
+                    document.getElementById('p12').innerHTML = "能够在雷区百步穿杨的你，破案也一定不在话下"
+                }
+                var i = array.Achievement[1];
+                if (i == 1) {
+                    var tmp = document.getElementById('2');
+                    tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                    document.getElementById('p21').innerHTML = "中道崩殂";
+                    document.getElementById('p22').innerHTML = "万事开头难，中间死的不明不白..."
+                }
+                var i = array.Achievement[2];
+                if (i == 1) {
+                    var tmp = document.getElementById('3');
+                    tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                    document.getElementById('p31').innerHTML = "解码高手";
+                    document.getElementById('p32').innerHTML = "这种小锁根本不在话下啦！"
+                }
+                var i = array.Achievement[3];
+                if (i == 1) {
+                    var tmp = document.getElementById('4');
+                    tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                    document.getElementById('p41').innerHTML = "解码不能";
+                    document.getElementById('p42').innerHTML = "这锁的设计者...有点东西啊"
+                }
+                var i = array.Achievement[4];
+                if (i == 1) {
+                    var tmp = document.getElementById('5');
+                    tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                    document.getElementById('p51').innerHTML = "壮烈成仁";
+                    document.getElementById('p52').innerHTML = "终究还是敌不过杀人无数的高桥..."
+                }
+                var i = array.Achievement[5];
+                if (i == 1) {
+                    var tmp = document.getElementById('6');
+                    tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                    document.getElementById('p61').innerHTML = "虚妄的日常";
+                    document.getElementById('p62').innerHTML = "诅咒事件已经告一段落了，可是未能触及事件的真相"
+                }
+                var i = array.Achievement[6];
+                if (i == 1) {
+                    var tmp = document.getElementById('7');
+                    tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                    document.getElementById('p71').innerHTML = "复仇天使？";
+                    document.getElementById('p72').innerHTML = "仇恨终究换来的只有空虚与寂寞"
+                }
+                var i = array.Achievement[7];
+                if (i == 1) {
+                    var tmp = document.getElementById('8');
+                    tmp.setAttribute('style', 'width: calc(25% - 2rem); margin: 1rem;cursor: pointer; filter:brightness(2);');
+                    document.getElementById('p81').innerHTML = "纯洁的救赎";
+                    document.getElementById('p82').innerHTML = "十年后的再度相遇...你的名字是？..."
+                }
+            }
+        </script>
+        <div class="cols">
+            <div id=1 class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(../images/end/end11.png)">
+                        <div class="inner">
+                            <p id=p11>Locked</p>
+                            <span>通关扫雷</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p id=p12 class="backstyle">游戏成就1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id=2 class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(../images/end/end22.png)">
+                        <div class="inner">
+                            <p id=p21>Locked</p>
+                            <span>扫雷失败</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p id=p22 class="backstyle">BadEnd1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id=3 class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(../images/end/end11.png)">
+                        <div class="inner">
+                            <p id=p31>Locked</p>
+                            <span>解开保险箱</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p id=p32 class="backstyle">游戏成就2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id=4 class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(../images/end/end22.png)">
+                        <div class="inner">
+                            <p id=p41>Locked</p>
+                            <span>没能解开保险箱</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p id=p42 class="backstyle">BadEnd2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id=5 class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(../images/end/end22.png)">
+                        <div class="inner">
+                            <p id=p51>Locked</p>
+                            <span>败给高桥隼人</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p id=p52 class="backstyle">结局成就1</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id=6 class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(../images/end/end11.png)">
+                        <div class="inner">
+                            <p id=p61>Locked</p>
+                            <span>高桥自首不再追问</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p id=p62 class="backstyle">结局成就2</p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id=7 class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(../images/end/end22.png)">
+                        <div class="inner">
+                            <p id=p71>Locked</p>
+                            <span>宽恕纱夏</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p id=p72 class="backstyle">结局成就3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id=8 class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(../images/end/end11.png)">
+                        <div class="inner">
+                            <p id=p81>Locked</p>
+                            <span>劝说纱夏</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p id=p82 class="backstyle">结局成就4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>

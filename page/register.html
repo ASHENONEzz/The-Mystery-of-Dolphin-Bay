@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/register.js"></script>
+</head>
+<style>
+    div button {
+        margin-left: 10px;
+    }
+    div>p {
+        font-size: 13px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 1px #1f1b1b;
+    }
+    div > button {
+        width: 120px;
+    height: 35px;
+    color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(192, 119, 91, 0.7);
+    background: rgba(192, 119, 91, 0.5);
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px #1f1b1b;
+    }
+    
+</style>
+<body>
+    <div class="box">
+        <h2>Register</h2>   
+        <div class="input-box">
+            <label>账号</label>
+            <input value="" id="user_name" autocomplete="off" 
+                onkeydown="if(event.keyCode==13){
+                        /*event.keyCode=0;*/
+                        event.returnValue=false;
+                        }">
+        </div>
+        <div class="input-box">
+            <label>密码</label>
+            <input type="password" value="" id="password" autocomplete="off" 
+                onkeydown="if(event.keyCode==13){
+                    /*event.keyCode=0;*/
+                    event.returnValue=false
+                    ;}">
+        </div>
+        <div class="input-box">
+            <label>确认密码</label>
+            <input type="password" value="" id="password_check" autocomplete="off" 
+                onkeydown="if(event.keyCode==13){
+                    /*event.keyCode=0;*/
+                    event.returnValue=false;
+                    }">
+        </div>
+        <div id="info" style="color: rgb(252, 38, 38); size: 15px;">&nbsp;</div>
+        <h6>页面跳转即为注册成功</h6> 
+        <div onclick="register();" class="option" id="register"><button>注册</button></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>trueEnd1</title>
+        <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+        <script src="../../js/Achievement.js"> </script>
+        <style>
+            * {
+                user-select: none;
+            }
+            body{
+                background-color: rgb(255, 255, 255);
+                background-size: cover;
+            }
+            #title{
+                display: block;
+                margin-top: 5%;
+                left: 25%;
+                text-align: center;
+            }
+            img {
+                text-align: center;
+                width: 100%;
+            }
+            #start {
+                text-align: center;
+                opacity: 0;
+            }
+            .firstBt
+            {   
+                backdrop-filter: blur(10px);
+                height: 6%;
+                margin-top: 0%;background-color: rgba(223, 199, 199, 0);
+                opacity: 1.0;font: 16px 黑体;
+                border-radius: 20px;
+                color: rgb(143, 131, 55);
+            }
+            p {
+                margin-bottom: 2px;
+                font-size: 20px;
+                Letter-spacing: large;
+            }
+            #end {
+                opacity: 0;
+                font-size: 52px;
+                font-weight: 1200;
+                text-shadow: 1px 1px 1px rgb(212, 200, 28);
+                font-family: 楷体;
+                margin-bottom: 0;
+                margin-top: 1vh;
+            }
+            #title {
+                opacity: 0;
+            }
+        </style>
+        <script>
+            
+            $(document).ready(function () {
+                $(window).load(function () {
+                    $("#title").animate({ opacity: "1.0" }, 4000);
+                    setTimeout(function() { 
+                                    $("#end").animate({ opacity: "1.0" }, 1000); 
+                                }, 4000);
+                    setTimeout(function() { 
+                                    $("#start").animate({ opacity: "1.0" }, 500); 
+                                }, 6000);
+                })
+            })
+            function goForward() {
+                 window.location.assign("../mainpage.html");
+            }
+            function saveThisScene() {
+                var Player = JSON.parse(localStorage.getItem("temp"));
+                Player.fakeEnd = true;
+                AddNewAchieve(5);
+                localStorage.setItem("temp", JSON.stringify(Player));
+                localStorage.setItem(Player.name, JSON.stringify(Player));
+            }
+            window.onload = function all(){
+                window.localStorage.nowBgm = "trueEnd0";
+                setTimeout(function() {
+                    window.localStorage.nowBgm = "mute";
+                }, 1000);
+                saveThisScene();
+            }
+        </script>
+    </head>
+    <body style="margin: 0;">
+        <div id="index">
+            <div id="title">
+                <img src="../../images/bg/trueEnd0.png"  id="titleImg">
+            </div>
+            <div>
+                <h2 align="center" id="end">
+                    复 仇 的 代 价    
+                </h2>
+            </div>
+            <div id="start">
+                <p>
+                    <button class="firstBt" type="button" onclick="goForward()">
+                        点击回到首页
+                    </button>
+                </p>
+            </div> 
+        </div>
+    </body>
+</html>

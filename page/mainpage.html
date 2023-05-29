@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>海豚湾之迷</title>
+        <script src="../js/index.js"></script>
+        <script src="../js/Achievement.js"></script>
+        <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <style>
+         @font-face {
+            /*方正字迹-吕建德行楷简体*/
+            font-family: "FZZJ-LJDXKJT";
+            font-display: swap;
+            src: local("FZZJ-LJDXKJT"),
+                url("../fonts/FZZJ-LJDXKJW.TTF")format("truetype");
+        }
+
+        @font-face {
+            /*方正苏轼新诗柳楷简体*/
+            font-family: "FZSXSLKJW";
+            font-display: swap;
+            src: local("FZSXSLKJW"),
+                url("../fonts/FZSXSLKJW.TTF")format("truetype");
+        }
+        .firstbt {
+            font-family: "FZSXSLKJW";
+        }
+        .normbt{
+            position: absolute;
+            font-family: "FZSXSLKJW";
+        }
+        #jx{
+            margin-left: 38%;
+        }
+        #lx{
+            position: relative;
+            margin-left: 52%;
+        }
+        
+        #gy{
+            margin-top: 8%;
+        }
+        #tc{
+            margin-top: 14%;
+        }
+
+    </style>
+    <body>
+        <div id="flowBackButton" style="display: none;"onclick="flowBack();">
+            <div>&#10554;</div>
+        </div>
+        <iframe src="./flow/flow.html" 
+                width="0%" 
+                height="0%" 
+                frameborder="0"
+                style="margin: 0;" 
+                allow="autoplay"
+                id="flow">
+        </iframe>
+        <div id="content">
+            <div><h1><img id="title" src="../images/icon/title.png" height="35%"></h1></div>
+            <div><button class="firstbt" type="button" onclick="newGame()">开  始</button></div>
+            <div><button class="normbt" id="jx" type="button" onclick="loadGame()">继 续</button></div>
+            <div><button class="normbt" id="lx" type="button" onclick="flow()">流程图</button></div>
+            <div><button class="normbt" id="cj" type="button" onclick="ToAchievement()">成  就</button></div>
+            <div><button class="normbt" id="gy" type="button" onclick="aboutUs()">关  于</button></div>
+            <div><button  class="normbt" id="tc" type="button" onclick="quitLogin()">退出登录</button></div>
+        </div>
+    </body>
+</html>
